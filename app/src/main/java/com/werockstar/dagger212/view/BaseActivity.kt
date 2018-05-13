@@ -1,4 +1,4 @@
-package com.werockstar.dagger212.view.activity
+package com.werockstar.dagger212.view
 
 import android.os.Bundle
 import android.support.v4.app.Fragment

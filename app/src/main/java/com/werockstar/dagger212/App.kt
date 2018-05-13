@@ -16,6 +16,10 @@ class App : Application(), HasActivityInjector {
 
     override fun onCreate() {
         super.onCreate()
-        DaggerApplicationComponent.builder().application(this).build()
+        DaggerApplicationComponent.builder().create(this).inject(this)
+    }
+
+    companion object {
+        var BASE_URL = ""
     }
 }
