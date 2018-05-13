@@ -1,7 +1,7 @@
-package com.werockstar.dagger212.di.module
+package com.werockstar.dagger211.di.module
 
 import android.app.Application
-import com.werockstar.dagger212.App
+import com.werockstar.dagger211.App
 import dagger.Binds
 import dagger.Module
 import javax.inject.Singleton

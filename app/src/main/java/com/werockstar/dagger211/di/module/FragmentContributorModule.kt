@@ -1,7 +1,7 @@
-package com.werockstar.dagger212.di.module
+package com.werockstar.dagger211.di.module
 
-import com.werockstar.dagger212.di.scope.PerFragment
-import com.werockstar.dagger212.view.fragment.MainFragment
+import com.werockstar.dagger211.di.scope.PerFragment
+import com.werockstar.dagger211.view.fragment.MainFragment
 import dagger.Module
 import dagger.android.ContributesAndroidInjector
 

@@ -1,6 +1,6 @@
-package com.werockstar.dagger212.di.module
+package com.werockstar.dagger211.di.module
 
-import com.werockstar.dagger212.App
+import com.werockstar.dagger211.App
 import dagger.Module
 import dagger.Provides
 import okhttp3.OkHttpClient

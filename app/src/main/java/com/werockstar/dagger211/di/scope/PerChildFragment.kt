@@ -1,4 +1,4 @@
-package com.werockstar.dagger212.di.scope
+package com.werockstar.dagger211.di.scope
 
 import javax.inject.Scope
 

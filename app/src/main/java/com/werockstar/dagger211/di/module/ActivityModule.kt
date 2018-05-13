@@ -1,9 +1,9 @@
-package com.werockstar.dagger212.di.module
+package com.werockstar.dagger211.di.module
 
 import android.app.Activity
 import android.content.Context
 import android.support.v7.app.AppCompatActivity
-import com.werockstar.dagger212.di.scope.PerActivity
+import com.werockstar.dagger211.di.scope.PerActivity
 import dagger.Binds
 import dagger.Module
 

@@ -1,9 +1,9 @@
-package com.werockstar.dagger212.di.component
+package com.werockstar.dagger211.di.component
 
-import com.werockstar.dagger212.App
-import com.werockstar.dagger212.di.module.ActivityContributorModule
-import com.werockstar.dagger212.di.module.ApplicationModule
-import com.werockstar.dagger212.di.module.HttpModule
+import com.werockstar.dagger211.App
+import com.werockstar.dagger211.di.module.ActivityContributorModule
+import com.werockstar.dagger211.di.module.ApplicationModule
+import com.werockstar.dagger211.di.module.HttpModule
 import dagger.Component
 import dagger.android.AndroidInjector
 import dagger.android.support.AndroidSupportInjectionModule

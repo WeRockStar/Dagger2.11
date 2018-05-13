@@ -1,9 +1,9 @@
-package com.werockstar.dagger212.view.activity
+package com.werockstar.dagger211.view.activity
 
 import android.os.Bundle
 import com.werockstar.dagger212.R
-import com.werockstar.dagger212.view.BaseActivity
-import com.werockstar.dagger212.view.fragment.MainFragment
+import com.werockstar.dagger211.view.BaseActivity
+import com.werockstar.dagger211.view.fragment.MainFragment
 
 class MainActivity : BaseActivity() {
 

@@ -1,8 +1,8 @@
-package com.werockstar.dagger212.di.module
+package com.werockstar.dagger211.di.module
 
-import com.werockstar.dagger212.di.module.submodule.MainActivityModule
-import com.werockstar.dagger212.di.scope.PerActivity
-import com.werockstar.dagger212.view.activity.MainActivity
+import com.werockstar.dagger211.di.module.submodule.MainActivityModule
+import com.werockstar.dagger211.di.scope.PerActivity
+import com.werockstar.dagger211.view.activity.MainActivity
 import dagger.Module
 import dagger.android.ContributesAndroidInjector
 
