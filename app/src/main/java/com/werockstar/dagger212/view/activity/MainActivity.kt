@@ -1,7 +1,8 @@
-package com.werockstar.dagger212
+package com.werockstar.dagger212.view.activity
 
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
+import com.werockstar.dagger212.R
 
 class MainActivity : AppCompatActivity() {
 
