@@ -2,7 +2,7 @@ package com.werockstar.dagger211
 
 import android.app.Activity
 import android.app.Application
-import com.werockstar.dagger212.di.component.DaggerApplicationComponent
+import com.werockstar.dagger211.di.component.DaggerApplicationComponent
 import dagger.android.AndroidInjector
 import dagger.android.DispatchingAndroidInjector
 import dagger.android.HasActivityInjector

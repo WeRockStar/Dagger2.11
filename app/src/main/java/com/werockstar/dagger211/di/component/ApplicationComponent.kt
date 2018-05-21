@@ -4,6 +4,7 @@ import com.werockstar.dagger211.App
 import com.werockstar.dagger211.di.module.ActivityContributorModule
 import com.werockstar.dagger211.di.module.ApplicationModule
 import com.werockstar.dagger211.di.module.HttpModule
+import com.werockstar.dagger211.di.module.RxThreadModule
 import dagger.Component
 import dagger.android.AndroidInjector
 import dagger.android.support.AndroidSupportInjectionModule
@@ -12,7 +13,8 @@ import javax.inject.Singleton
 @Singleton
 @Component(modules = [
     ApplicationModule::class, AndroidSupportInjectionModule::class,
-    ActivityContributorModule::class, HttpModule::class
+    ActivityContributorModule::class, HttpModule::class,
+    RxThreadModule::class
 ])
 interface ApplicationComponent : AndroidInjector<App> {
 
