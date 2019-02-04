@@ -1,10 +1,12 @@
 package com.werockstar.dagger211.di.component
 
+import android.app.Application
 import com.werockstar.dagger211.App
 import com.werockstar.dagger211.di.module.ActivityContributorModule
 import com.werockstar.dagger211.di.module.ApplicationModule
 import com.werockstar.dagger211.di.module.HttpModule
 import com.werockstar.dagger211.di.module.RxThreadModule
+import dagger.BindsInstance
 import dagger.Component
 import dagger.android.AndroidInjector
 import dagger.android.support.AndroidSupportInjectionModule
@@ -12,12 +14,19 @@ import javax.inject.Singleton
 
 @Singleton
 @Component(modules = [
-    ApplicationModule::class, AndroidSupportInjectionModule::class,
-    ActivityContributorModule::class, HttpModule::class,
+    ApplicationModule::class,
+    AndroidSupportInjectionModule::class,
+    ActivityContributorModule::class,
+    HttpModule::class,
     RxThreadModule::class
 ])
-interface ApplicationComponent : AndroidInjector<App> {
+interface AppComponent : AndroidInjector<App> {
 
     @Component.Builder
-    abstract class Builder : AndroidInjector.Builder<App>()
+    interface Builder {
+        @BindsInstance
+        fun application(application: Application): Builder
+
+        fun build(): AppComponent
+    }
 }

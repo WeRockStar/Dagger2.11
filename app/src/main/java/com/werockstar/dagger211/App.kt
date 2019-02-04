@@ -16,7 +16,11 @@ class App : Application(), HasActivityInjector {
 
     override fun onCreate() {
         super.onCreate()
-        DaggerApplicationComponent.builder().create(this).inject(this)
+
+        DaggerApplicationComponent.builder()
+                .application(this)
+                .build()
+                .inject(this)
     }
 
     companion object {
