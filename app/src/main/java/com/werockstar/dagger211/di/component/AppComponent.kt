@@ -27,6 +27,8 @@ interface AppComponent : AndroidInjector<App> {
         @BindsInstance
         fun application(application: Application): Builder
 
+        fun httpModule(httpModule: HttpModule): Builder
+
         fun build(): AppComponent
     }
 }

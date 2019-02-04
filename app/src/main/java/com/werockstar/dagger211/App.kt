@@ -2,13 +2,16 @@ package com.werockstar.dagger211
 
 import android.app.Activity
 import android.app.Application
-import com.werockstar.dagger211.di.component.DaggerApplicationComponent
+import com.werockstar.dagger211.di.component.DaggerAppComponent
+import com.werockstar.dagger211.di.module.HttpModule
 import dagger.android.AndroidInjector
 import dagger.android.DispatchingAndroidInjector
 import dagger.android.HasActivityInjector
 import javax.inject.Inject
 
-class App : Application(), HasActivityInjector {
+open class App : Application(), HasActivityInjector {
+
+    open fun getBaseUrl() = "https://api.github.com/"
 
     @Inject lateinit var activityInjector: DispatchingAndroidInjector<Activity>
 
@@ -17,8 +20,9 @@ class App : Application(), HasActivityInjector {
     override fun onCreate() {
         super.onCreate()
 
-        DaggerApplicationComponent.builder()
+        DaggerAppComponent.builder()
                 .application(this)
+                .httpModule(HttpModule(getBaseUrl()))
                 .build()
                 .inject(this)
     }
