@@ -8,7 +8,6 @@ import com.werockstar.dagger211.di.module.HttpModule
 import com.werockstar.dagger211.di.module.RxThreadModule
 import dagger.BindsInstance
 import dagger.Component
-import dagger.android.AndroidInjector
 import dagger.android.support.AndroidSupportInjectionModule
 import javax.inject.Singleton
 
@@ -20,7 +19,7 @@ import javax.inject.Singleton
     HttpModule::class,
     RxThreadModule::class
 ])
-interface AppComponent : AndroidInjector<App> {
+interface AppComponent {
 
     @Component.Builder
     interface Builder {
@@ -31,4 +30,6 @@ interface AppComponent : AndroidInjector<App> {
 
         fun build(): AppComponent
     }
+
+    fun inject(app: App)
 }

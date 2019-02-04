@@ -1,5 +1,7 @@
 package com.werockstar.dagger211.di.module
 
+import android.app.Application
+import com.werockstar.dagger211.App
 import com.werockstar.dagger211.api.APIService
 import dagger.Module
 import dagger.Provides
@@ -25,9 +27,10 @@ class HttpModule(private val baseUrl: String) {
 
     @Provides
     @Singleton
-    fun provideRetrofit(okHttpClient: OkHttpClient): Retrofit {
+    fun provideRetrofit(okHttpClient: OkHttpClient, application: Application): Retrofit {
+        val app = application as App
         return Retrofit.Builder()
-                .baseUrl(baseUrl)
+                .baseUrl(app.getBaseUrl())
                 .client(okHttpClient)
                 .addCallAdapterFactory(RxJava2CallAdapterFactory.createAsync())
                 .addConverterFactory(GsonConverterFactory.create())

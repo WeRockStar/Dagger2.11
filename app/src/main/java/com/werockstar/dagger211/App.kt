@@ -2,6 +2,7 @@ package com.werockstar.dagger211
 
 import android.app.Activity
 import android.app.Application
+import com.werockstar.dagger211.di.component.AppComponent
 import com.werockstar.dagger211.di.component.DaggerAppComponent
 import com.werockstar.dagger211.di.module.HttpModule
 import dagger.android.AndroidInjector
@@ -20,14 +21,11 @@ open class App : Application(), HasActivityInjector {
     override fun onCreate() {
         super.onCreate()
 
-        DaggerAppComponent.builder()
+        val component: AppComponent = DaggerAppComponent.builder()
                 .application(this)
                 .httpModule(HttpModule(getBaseUrl()))
                 .build()
-                .inject(this)
-    }
+        component.inject(this)
 
-    companion object {
-        var BASE_URL = ""
     }
 }
