@@ -26,6 +26,5 @@ open class App : Application(), HasActivityInjector {
                 .httpModule(HttpModule(getBaseUrl()))
                 .build()
         component.inject(this)
-
     }
 }
