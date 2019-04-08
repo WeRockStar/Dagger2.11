@@ -30,7 +30,7 @@ class MainActivityTest {
     }
 
     @Test
-    fun click_request_should_see_WeRockStar() {
+    fun click_request_should_see_WeRockStar1() {
         mockWebServer.enqueue(MockResponse().setBody("""
             {
                 "login": "WeRockStar"
