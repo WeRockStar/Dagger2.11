@@ -8,6 +8,7 @@ import android.view.ViewGroup
 import com.werockstar.dagger211.api.APIService
 import com.werockstar.dagger212.R
 import com.werockstar.dagger211.view.BaseFragment
+import io.reactivex.Observable
 import io.reactivex.android.schedulers.AndroidSchedulers
 import io.reactivex.schedulers.Schedulers
 import kotlinx.android.synthetic.main.fragment_main.*
@@ -27,14 +28,13 @@ class MainFragment : BaseFragment() {
 
         btnRequest.setOnClickListener {
             api.getUser("WeRockStar")
+					.onErrorResumeNext(Observable.empty())
                     .subscribeOn(Schedulers.io())
                     .observeOn(AndroidSchedulers.mainThread())
-                    .subscribe({
-                        tvResult.text = it.login
-                    }, {
-
-                    })
-        }
+                    .subscribe {
+						tvResult.text = it.login
+					}
+		}
     }
 
 
